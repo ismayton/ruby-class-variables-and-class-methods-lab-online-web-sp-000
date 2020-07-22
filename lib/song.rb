@@ -15,7 +15,7 @@ class Song
     @name = name
   end
   
-  def Self.count
+  def Song.count
     @@count
   end
 end
