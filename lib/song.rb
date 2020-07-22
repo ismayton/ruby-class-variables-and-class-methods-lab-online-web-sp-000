@@ -39,4 +39,28 @@ class Song
     unique_genres
   end 
   
+  def Song.artist_count
+    artist_hist = {}
+    @@artists.each do |artist|
+      if artist_hist[artist] == nil 
+        artist_hist[artist] = 1 
+      else 
+        artist_hist[artist] += 1 
+      end 
+    end
+    artist_hist
+  end
+
+  def Song.genre_count 
+    genre_hist = {}
+    @@genres.each do |genre|
+      if genre_hist[genre] == nil
+        genre_hist[genre] = 1 
+      else
+        genre_hist[genre] += 1 
+      end
+    end
+    genre_hist
+  end
+  
 end
